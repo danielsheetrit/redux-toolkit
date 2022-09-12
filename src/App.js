@@ -1,12 +1,13 @@
-import './App.css';
+import React from 'react';
+import Globals from 'styles/globals';
+import { Home } from './pages';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        hello world
-      </header>
-    </div>
+    <>
+      <Globals />
+      <Home />
+    </>
   );
 }
 
