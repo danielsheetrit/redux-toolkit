@@ -1,7 +1,7 @@
-const OVERALL_CLR = '#2F4454';
-const TEXT_CLR = '#FFF';
-const CARD_CLR = '#1C3334';
-const PRIMARY_BTN_CLR = '#DA7B93';
+const OVERALL_CLR = '#EAE1DF';
+const TEXT_CLR = '#333';
+const CARD_CLR = '#545E56';
+const PRIMARY_BTN_CLR = '#667761';
 const SECONDARY_BTN_CLR = '#376E6F';
 
 export const colors = {

@@ -1,12 +1,13 @@
 import React from 'react';
 import Globals from 'styles/globals';
-import { Home } from './pages';
+
+import { Contacts } from './pages';
 
 function App() {
   return (
     <>
       <Globals />
-      <Home />
+      <Contacts />
     </>
   );
 }

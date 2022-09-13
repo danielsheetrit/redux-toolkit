@@ -1,0 +1,39 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Dylan Bailey",
+      "phone": "1-583-913-6181",
+      "email": "non.leo.vivamus@hotmail.org",
+      "country": "Colombia"
+    },
+    {
+      "id": "2",
+      "name": "Abigail Duncan",
+      "phone": "(436) 865-4267",
+      "email": "nisi@icloud.org",
+      "country": "Pakistan"
+    },
+    {
+      "id": "3",
+      "name": "Kasimir Bright",
+      "phone": "(377) 405-7926",
+      "email": "sed.dictum.proin@google.com",
+      "country": "Ireland"
+    },
+    {
+      "id": "4",
+      "name": "Stephen Hill",
+      "phone": "1-364-116-4132",
+      "email": "erat.neque@outlook.org",
+      "country": "Sweden"
+    },
+    {
+      "id": "5",
+      "name": "Halla Farmer",
+      "phone": "(978) 231-5825",
+      "email": "ante.dictum@protonmail.couk",
+      "country": "Sweden"
+    }
+  ]
+}

@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { createGlobalStyle } from 'styled-components';
 import { colors } from './variables';
 
@@ -12,6 +11,7 @@ const Globals = createGlobalStyle`
 
 html {
     font-family: Tahoma, sans-serif;
+    font-weight: 600;
     color: ${colors.TEXT_CLR};
     scroll-behavior: smooth;
 }
