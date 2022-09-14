@@ -1,12 +1,16 @@
-import React from 'react';
+// @ts-nocheck
+import React, { useEffect } from 'react';
 
 import { useGetContactsQuery, useRemoveContactMutation } from 'api/apiSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import { setContacts } from 'slices/contactsSlice';
+
 import { Navbar, AddContact } from 'cmps';
 
 import { PageContainer } from 'styles/layout';
 import { ContactsStyles } from './styled';
 
-const Todos = () => {
+const Contacts = () => {
   const {
     data: contacts,
     isLoading,
@@ -17,11 +21,25 @@ const Todos = () => {
 
   const [removeContact] = useRemoveContactMutation();
 
+  const contactsState = useSelector((state) => state?.contactsReducer?.contacts);
+  const dispatch = useDispatch();
+
+  const updateState = () => {
+    dispatch(setContacts(contacts));
+  };
+
+  useEffect(() => {
+    if (contacts?.length) {
+      updateState();
+    }
+  }, [contacts?.length]);
+
   return (
     <>
-      <Navbar />
+      <Navbar contactsCount={contactsState?.length} />
       <PageContainer>
         <AddContact />
+        <button onClick={() => updateState()}>Show contacts number</button>
         <ContactsStyles.List>
           {contacts?.length &&
             contacts.map((contact) => {
@@ -45,4 +63,4 @@ const Todos = () => {
   );
 };
 
-export default Todos;
+export default Contacts;

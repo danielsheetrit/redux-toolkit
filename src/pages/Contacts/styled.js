@@ -14,6 +14,8 @@ const Card = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
+  min-width: 175px;
+
   background-color: ${colors.CARD_CLR};
   color: ${colors.OVERALL_CLR};
   padding: 12px;
@@ -32,10 +34,14 @@ const Card = styled.div`
 `;
 
 const CardHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  > * {
-    margin: 0.5rem;
+  position: relative;
+  width: 100%;
+
+  > button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
   }
 `;
 
