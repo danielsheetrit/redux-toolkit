@@ -45,8 +45,20 @@ const CardHeader = styled.div`
   }
 `;
 
+const CountBtn = styled.button`
+  margin-top: 1rem;
+  width: 200px;
+  background-color: ${colors.SECONDARY_BTN_CLR};
+  border-radius: 4px;
+  margin-top: 1rem;
+  padding: 8px;
+  font-weight: 600;
+  color: white;
+`;
+
 export const ContactsStyles = {
   List,
   Card,
   CardHeader,
+  CountBtn
 };

@@ -9,7 +9,12 @@ const Navbar = ({ contactsCount }) => {
     <PageContainer full>
       <Nav>
         <CmpContainer>
-          <span>Contacts Count: {contactsCount && contactsCount}</span>
+          <span>
+            Contacts Count:
+            <i style={{ color: 'yellow', marginLeft: '.5rem' }}>
+              {contactsCount && contactsCount}
+            </i>
+          </span>
         </CmpContainer>
       </Nav>
     </PageContainer>

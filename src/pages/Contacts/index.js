@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { useGetContactsQuery, useRemoveContactMutation } from 'api/apiSlice';
 import { useSelector, useDispatch } from 'react-redux';
@@ -21,25 +21,26 @@ const Contacts = () => {
 
   const [removeContact] = useRemoveContactMutation();
 
-  const contactsState = useSelector((state) => state?.contactsReducer?.contacts);
+  const contactsState = useSelector(
+    (state) => state?.contactsReducer?.contacts
+  );
   const dispatch = useDispatch();
 
   const updateState = () => {
     dispatch(setContacts(contacts));
   };
 
-  useEffect(() => {
-    if (contacts?.length) {
-      updateState();
-    }
-  }, [contacts?.length]);
-
   return (
     <>
       <Navbar contactsCount={contactsState?.length} />
       <PageContainer>
+        
         <AddContact />
-        <button onClick={() => updateState()}>Show contacts number</button>
+
+        <ContactsStyles.CountBtn onClick={() => updateState()}>
+          Show contacts count
+        </ContactsStyles.CountBtn>
+
         <ContactsStyles.List>
           {contacts?.length &&
             contacts.map((contact) => {

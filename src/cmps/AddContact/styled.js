@@ -3,13 +3,14 @@ import { colors } from 'styles/variables';
 
 export const FormContainer = styled.form`
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 12px;
     flex-wrap: wrap;
     background-color: ${colors.CARD_CLR};
     border-radius: 4px;
     margin-top: 2rem;
+    color: white;
 
     > * {
         margin: .5rem;
